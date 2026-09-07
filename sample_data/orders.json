@@ -1,0 +1,28 @@
+{
+  "_note": "가상 데이터입니다. 실제 발주·고객·품목과 무관합니다.",
+  "products": [
+    {"code": "PRD-1001", "name": "Sensor Module A", "unit_net_kg": 0.0242, "box_qty": 350},
+    {"code": "PRD-1002", "name": "Sensor Module B", "unit_net_kg": 0.0980, "box_qty": 100},
+    {"code": "PRD-2001", "name": "USB Cable 1.5m", "unit_net_kg": 0.0400, "box_qty": 500}
+  ],
+  "purchase_orders": [
+    {
+      "po": "PO10001", "customer": "Northwind Systems", "country": "Canada",
+      "lines": [{"code": "PRD-1001", "qty": 1000}],
+      "batches": [
+        {"seq": 1, "state": "출고확정", "requested": {"PRD-1001": 400},
+         "shipments": [{"code": "PRD-1001", "qty": 400, "cancelled": false}]}
+      ]
+    },
+    {
+      "po": "PO10002", "customer": "Contoso Devices", "country": "India",
+      "lines": [{"code": "PRD-1002", "qty": 250}, {"code": "PRD-2001", "qty": 250}],
+      "batches": []
+    }
+  ],
+  "serial_stock": [
+    {"code": "PRD-1001", "prefix": "SN", "start": 1, "end": 600, "width": 6, "lot": "L2601"},
+    {"code": "PRD-1001", "prefix": "SN", "start": 1001, "end": 1200, "width": 6, "lot": "L2602"},
+    {"code": "PRD-1002", "prefix": "AB", "start": 1, "end": 300, "width": 5, "lot": "L2603"}
+  ]
+}
